@@ -1,0 +1,1120 @@
+<!-- 
+     I, Nguyen Duc Long, 000837437 certify that this material is my original work.
+     No other person's work has been used without due acknowledgement.
+
+     @date Dec 10, 2021
+     @author DUC LONG NGUYEN (Paul)
+     @A brief description of the file: Final project: St Joseph's Hospital Management;
+        file html
+ -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>St Joseph Hospital Management</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css">
+    <!-- BOOTSTRAP4  -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="final_Long_000837437.css">
+
+    <!--jquery library-->
+    <script src="https://code.jquery.com/jquery-2.2.4.js"   integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script> 
+
+
+    <script src="final_Long_000837437.js"></script>
+    <script src="final_Long_000837437_jquery.js"></script>
+</head>
+<body>
+
+
+    <div class="container bg-light mt-sm-3 pt-sm-3">
+
+
+        <!-- /*============== HEADER ================*/ -->
+        <div class="mt-sm-3">
+            <h4 class="row d-flex justify-content-center font-weight-bold mt-sm-3 pt-sm-3">My Final Project</h4>
+            <h6 class="row d-flex justify-content-end mt-sm-2 mb-sm-3 pb-sm-3 mr-sm-3">by Nguyen Duc Long</h6>    
+        </div>
+
+        <div >
+            <div class="row">
+                <div class="col-sm-1">
+                    <div class="row justify-content-center mt-4 mb-3">
+                        <button class="controlMenu btn btn-link btn-lg sessions session-menu"><i class="fas fa-bars"></i></button>
+                    </div>
+                </div>
+                <div class="col-sm-1"></div>
+                <div class="col-sm-8">
+                    <h1 class="row d-flex justify-content-center font-weight-bold mt-sm-3 pt-sm-3 text-uppercase">St Joseph's Hospital Management</h1>
+                </div>
+                <div class="col-sm-2">
+                    <div class="row">
+                        <div class="col-sm-4 mt-4 mb-3">
+                            <button class="controlUser btn btn-link btn-lg  sessions session-user"><i class="fas fa-user"></i></button>
+                        </div>
+                        <div class="col-sm-4 mt-4 mb-3">
+                            <button class="controlRegister btn btn-link btn-lg  sessions session-register"><i class="far fa-registered"></i></button>
+                        </div>
+                        <div class="col-sm-4 mt-4 mb-3">
+                            <button class="controlLogin btn btn-link btn-lg  sessions session-login"><i class="fas fa-sign-in-alt" style="transform: rotate(180deg);"></i></button>
+                        </div>
+                    </div>
+                </div>  
+            </div>
+        </div>
+
+        <div class="blackBackground"></div>
+
+
+        <!-- /*============== REGISTER FUNCTION ================*/ -->
+        <div class="infoRegister">
+            <div class="infoRegisterConfig">
+                <div class="mt-sm-1 pt-sm-1 row">
+                    <div class="container">     
+                        <div class="row justify-content-center mb-3 info-registers">
+                            <h4 class="font-weight-bold text-center ">Register</h4>
+                        </div>
+                        <div class="row justify-content-center">
+                            <div class="col-sm-10">
+                                <div class="form-group row">
+                                    <label for="registers-user_email" class="col-sm-4 form-control-label">Your email</label>
+                                    <div class="col-sm-8">
+                                        <input type="email"   id="registers-user_email" class="registers user_email form-control" placeholder="joseph_hospital@joseph_hospital.com">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="registers-user_password" class="col-sm-4 form-control-label">Your password</label>
+                                    <div class="col-sm-8">
+                                        <input type="password"   id="registers-user_password" class="registers user_password form-control" placeholder="Your password">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="registers-user_confirm_password" class="col-sm-4 form-control-label">Confirm your password</label>
+                                    <div class="col-sm-8">
+                                        <input type="password"   id="registers-user_confirm_password" class="registers user_confirm_password form-control" placeholder="Confirm your password">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="registers-patient_id" class="col-sm-4 form-control-label">Your Patient ID<br><em>(If you are a patient)</em></label>
+                                    <div class="col-sm-8">
+                                        <input type="number" id="registers-patient_id" class="registers patient_id form-control"  placeholder="Your Patient ID">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <small class="text-right"><em class="col-sm-12 form-control-label registers-announcement"></em></small>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row justify-content-center">
+                            <button class="btn-warning btnSubmit w-25">Submit</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <!-- /*============== LOGIN FUNCTION ================*/ -->
+        <div class="infoLogin">
+            <div class="infoLoginConfig">                
+                <div class="mt-sm-1 pt-sm-1 row">
+                    <div class="container">     
+                        <div class="row justify-content-center mb-3 info-users">
+                            <h4 class="font-weight-bold text-center ">LOGIN</h4>
+                        </div>
+                        <div class="row justify-content-center">
+                            <div class="col-sm-10">
+                                <div class="form-group row">
+                                    <label for="login-user_email" class="col-sm-4 form-control-label">Your email</label>
+                                    <div class="col-sm-8">
+                                        <input type="email"   id="login-user_email" class="login user_email form-control" placeholder="joseph_hospital@joseph_hospital.com">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="login-user_password" class="col-sm-4 form-control-label">Your password</label>
+                                    <div class="col-sm-8">
+                                        <input type="password"   id="login-user_password" class="login user_password form-control" placeholder="Your password">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <small class="text-right"><em class="col-sm-12 form-control-label login-announcement"></em></small>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row justify-content-center">
+                            <button class="btn-warning btnLogin w-25">Login</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <!-- /*============== CHANGE PASSWORD AND LOGOUT FUNCTION ================*/ -->
+        <div class="infoUser">
+            <div class="infoUserConfig">
+                <div class="mt-sm-1 pt-sm-1 row">
+                    <div class="container">     
+                        <div class="row justify-content-center mb-3 info-users">
+                            <h4 class="font-weight-bold text-center ">Confirmation for Logout</h4>
+                        </div>
+                        <div class="row justify-content-center ">
+                            <div class="col-sm-8 justify-content-center  mb-3 userDetails update-users">
+                                <div class="row">  
+                                    <div class="userDetails">  
+                                        <input type="hidden" class="userDetails userDetails-id form-control changePass">
+
+                                        <div class="form-group row">
+                                            <label class="col-sm-4 form-control-label">Email</label>
+                                            <div class="col-sm-8">
+                                                <input type="email" class="userDetails userDetails-current-email form-control changePass" maxlength="100" placeholder="Email" disabled>
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label class="col-sm-4 form-control-label">Current Password</label>
+                                            <div class="col-sm-8">
+                                                <input type="password" class="userDetails-current-password form-control changePass" maxlength="30" placeholder="Current Password">
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label class="col-sm-4 form-control-label">New Password</label>
+                                            <div class="col-sm-8">
+                                                <input type="password" class="userDetails-new-password form-control changePass" maxlength="30" placeholder="New Password">
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label class="col-sm-4 form-control-label">Confirm Password</label>
+                                            <div class="col-sm-8">
+                                                <input type="password" class="userDetails-confirm-password form-control changePass" maxlength="30" placeholder="Confirm Password">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <small class="text-right"><em class="col-sm-12 form-control-label change-password-announcement"></em></small>
+                        </div>
+                        <div class="row justify-content-center">
+                            <button class="btn-warning btnChangePassword w-25 mr-sm-3">Change Password</button>
+                            <button class="btn-danger btnLogout w-25 ml-sm-3">Log out</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <!-- /*============== MENU FUNCTION (LIST ALL OF THE TABLES IN THE DATABASE) ================*/ -->
+        <div class="menuContent">
+            <div class="menuContentConfig">
+
+                <div class="mt-sm-3 pt-sm-3 row">
+                    <div class="container">     
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <div class="row">                                    
+                                    <div class="list-group-item bg-transparent text-center border-0 sessions session-admissions col-sm-4">
+                                        <input type="button" class="button btn btn-secondary btn-lg admissions w-75 font-weight-bold" value="Admissions">
+                                    </div>
+                                    <div class="list-group-item bg-transparent text-center border-0 sessions session-departments col-sm-4">
+                                        <input type="button" class="button btn btn-secondary btn-lg departments w-75 font-weight-bold" value="Departments">
+                                    </div>
+                                    <div class="list-group-item bg-transparent text-center border-0 sessions session-items col-sm-4">
+                                        <input type="button" class="button btn btn-secondary btn-lg items w-75 font-weight-bold" value="Items">
+                                    </div>
+                                    <div class="list-group-item bg-transparent text-center border-0 sessions session-medications col-sm-4">
+                                        <input type="button" class="button btn btn-secondary btn-lg medications w-75 font-weight-bold" value="Medications">
+                                    </div>
+                                    <div class="list-group-item bg-transparent text-center border-0 sessions session-nursing_units col-sm-4">
+                                        <input type="button" class="button btn btn-secondary btn-lg nursing_units w-75 font-weight-bold" value="Nursing Units">
+                                    </div>
+                                    <div class="list-group-item bg-transparent text-center border-0 sessions session-patients col-sm-4">
+                                        <input type="button" class="button btn btn-secondary btn-lg patients w-75 font-weight-bold" value="Patients">
+                                    </div>
+                                    <div class="list-group-item bg-transparent text-center border-0 sessions session-physicians col-sm-4">
+                                        <input type="button" class="button btn btn-secondary btn-lg physicians w-75 font-weight-bold" value="Physicians">
+                                    </div>
+                                    <div class="list-group-item bg-transparent text-center border-0 sessions session-provinces col-sm-4">
+                                        <input type="button" class="button btn btn-secondary btn-lg provinces w-75 font-weight-bold" value="Provinces">
+                                    </div>
+                                    <div class="list-group-item bg-transparent text-center border-0 sessions session-vendors col-sm-4" >
+                                        <input type="button" class="button btn btn-secondary btn-lg vendors w-75 font-weight-bold" value="Vendors">
+                                    </div>
+                                    <div class="list-group-item bg-transparent text-center border-0 sessions session-users col-sm-4">
+                                        <input type="button" class="button btn btn-secondary btn-lg users w-75 font-weight-bold" value="Users">
+                                    </div>
+                                    <div class="list-group-item bg-transparent text-center border-0 sessions session-unit_dose_orders col-sm-4">
+                                        <input type="button" class="button btn btn-secondary btn-lg unit_dose_orders w-75 font-weight-bold" value="Unit Dose Orders">
+                                    </div>
+                                    <div class="list-group-item bg-transparent text-center border-0 sessions session-purchase_order_lines col-sm-4">
+                                        <input type="button" class="button btn btn-secondary btn-lg purchase_order_lines w-75 font-weight-bold" value="Purchase Order Lines">
+                                    </div>
+                                    <div class="list-group-item bg-transparent text-center border-0 sessions session-purchase_orders col-sm-4">
+                                        <input type="button" class="button btn btn-secondary btn-lg purchase_orders w-75 font-weight-bold" value="Purchase Orders">
+                                    </div>
+                                    <div class="list-group-item bg-transparent text-center border-0 sessions session-encounters col-sm-4">
+                                        <input type="button" class="button btn btn-secondary btn-lg encounters w-75 font-weight-bold" value="Encounters">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>   
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <!-- /*============== DELETE AN ITEM FUNCTION ================*/ -->
+        <div class="menuContentDelete">
+            <div class="menuContentConfigDelete">
+                <div class="mt-sm-3 pt-sm-3 row">
+                    <div class="container">     
+                        <div class="row justify-content-center mb-3">
+                            <h4 class="font-weight-bold text-center">Confirm to delete?</h4>
+                        </div>
+                        <div class="row justify-content-center">
+                            <button class="btn btn-danger btnDeleteItem w-25">Delete</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <!-- /*============== CONFIRM FOR UPDATE OR INSERT AN ITEM ================*/ -->
+        <div class="menuContentUpdate">
+            <div class="menuContentConfigUpdate">
+                <div class="mt-sm-3 pt-sm-3 row">
+                    <div class="container">     
+                        <div class="row justify-content-center mb-3">
+                            <h4 class="font-weight-bold text-center ">Confirm to update or insert?</h4>
+                        </div>
+                        <div class="row justify-content-center">
+                            <button class="btn btn-warning btnUpdateItem w-25">Update/Insert</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+        <!-- /*============== UPDATE OR INSERT AN ITEM FUNCTION ================*/ -->
+        <div class="infoUpdate">
+            <div class="infoUpdateConfig">
+                <div class="mt-sm-1 pt-sm-1 row">
+
+                    <!-- /*============== admissions TABLE ================*/ -->
+                    <div class="container updates d-none">
+                        <div class="row justify-content-center mb-3 update update-admissions">
+                            <div class="col-sm-10">
+                                <div class="form-group row">
+                                    <div class="col-sm-8">
+                                        <input type="hidden"   id="admissions-admissions_id" class="update-admissions admissions_id form-control" placeholder="Admissions ID">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="admissions-patient_id" class="col-sm-4 form-control-label">Patient ID</label>
+                                    <div class="col-sm-8">
+                                        <input type="number"   id="admissions-patient_id" class="update-admissions patient_id form-control" placeholder="Patient ID">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="admissions-admission_date" class="col-sm-4 form-control-label">Admission Date</label>
+                                    <div class="col-sm-8">
+                                        <input type="date"   id="admissions-admission_date" class="update-admissions admission_date form-control" placeholder="Admission Date">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="admissions-discharge_date" class="col-sm-4 form-control-label">Discharge Date</label>
+                                    <div class="col-sm-8">
+                                        <input type="date"   id="admissions-discharge_date" class="update-admissions discharge_date form-control" placeholder="Discharge Date">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="admissions-primary_diagnosis" class="col-sm-4 form-control-label">Primary Diagnosis</label>
+                                    <div class="col-sm-8">
+                                        <input type="text"   id="admissions-primary_diagnosis" class="update-admissions primary_diagnosis form-control" maxlength="255" placeholder="Primary Diagnosis">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="admissions-secondary_diagnoses" class="col-sm-4 form-control-label">Secondary Diagnosis</label>
+                                    <div class="col-sm-8">
+                                        <input type="text"   id="admissions-secondary_diagnoses" class="update-admissions secondary_diagnoses form-control" maxlength="255" placeholder="Secondary Diagnosis">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="admissions-attending_physician_id" class="col-sm-4 form-control-label">Attending Physician ID</label>
+                                    <div class="col-sm-8">
+                                        <input type="number"   id="admissions-attending_physician_id" class="update-admissions attending_physician_id form-control" placeholder="Attending Physician ID">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="admissions-nursing_unit_id" class="col-sm-4 form-control-label">Nursing Unit ID</label>
+                                    <div class="col-sm-8">
+                                        <input type="text"   id="admissions-nursing_unit_id" class="update-admissions nursing_unit_id form-control" maxlength="10" placeholder="Nursing Unit ID">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="admissions-room" class="col-sm-4 form-control-label">Room</label>
+                                    <div class="col-sm-8">
+                                        <input type="number"   id="admissions-room" class="update-admissions room form-control" placeholder="Room">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="admissions-bed" class="col-sm-4 form-control-label">Bed</label>
+                                    <div class="col-sm-8">
+                                        <input type="number"   id="admissions-bed" class="update-admissions bed form-control" placeholder="Bed">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- /*============== departments TABLE ================*/ -->
+                    <div class="container updates d-none">
+                        <div class="row justify-content-center mb-3 update  update-departments">
+                            <div class="col-sm-10">
+                                <div class="form-group row">
+                                    <div class="col-sm-8">
+                                        <input type="hidden"   id="departments-department_id" class="update-departments department_id form-control" placeholder="Department ID">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="departments-department_name" class="col-sm-4 form-control-label">Department Name</label>
+                                    <div class="col-sm-8">
+                                        <input type="text"   id="departments-department_name" class="update-departments department_name form-control" maxlength="50" placeholder="Department Name">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="departments-manager_first_name" class="col-sm-4 form-control-label">Manager First Name</label>
+                                    <div class="col-sm-8">
+                                        <input type="text"   id="departments-manager_first_name" class="update-departments manager_first_name form-control" maxlength="50" placeholder="Manager First Name">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="departments-manager_last_name" class="col-sm-4 form-control-label">Manager Last Name</label>
+                                    <div class="col-sm-8">
+                                        <input type="text"   id="departments-manager_last_name" class="update-departments manager_last_name form-control" maxlength="50" placeholder="Manager Last Name">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!-- /*============== items TABLE ================*/ -->
+                    <div class="container updates d-none">
+                        <div class="row justify-content-center mb-3 update  update-items">
+                            <div class="col-sm-10">
+                                <div class="form-group row">
+                                    <div class="col-sm-8">
+                                        <input type="hidden"   id="items-item_id" class="update-items item_id form-control" placeholder="Item ID">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="items-item_description" class="col-sm-4 form-control-label">Item Description</label>
+                                    <div class="col-sm-8">
+                                        <input type="text"   id="items-item_description" class="update-items item_description form-control" maxlength="50" placeholder="Item Description">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="items-item_cost" class="col-sm-4 form-control-label">Item Cost</label>
+                                    <div class="col-sm-8">
+                                        <input type="number"   id="items-item_cost" class="update-items item_cost form-control" placeholder="Item Cost">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="items-quantity_on_hand" class="col-sm-4 form-control-label">Quantity On Hand</label>
+                                    <div class="col-sm-8">
+                                        <input type="number"   id="items-quantity_on_hand" class="update-items quantity_on_hand form-control" placeholder="Quantity On Hand">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="items-usage_ytd" class="col-sm-4 form-control-label">Usage YTD</label>
+                                    <div class="col-sm-8">
+                                        <input type="number"   id="items-usage_ytd" class="update-items usage_ytd form-control" placeholder="Usage YTD">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="items-primary_vendor_id" class="col-sm-4 form-control-label">Primary Vendor ID</label>
+                                    <div class="col-sm-8">
+                                        <input type="number"   id="items-primary_vendor_id" class="update-items primary_vendor_id form-control" placeholder="Primary Vendor ID">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="items-order_quantity" class="col-sm-4 form-control-label">Order Quantity</label>
+                                    <div class="col-sm-8">
+                                        <input type="number"   id="items-order_quantity" class="update-items order_quantity form-control" placeholder="Order Quantity">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="items-order_point" class="col-sm-4 form-control-label">Order Point</label>
+                                    <div class="col-sm-8">
+                                        <input type="number"   id="items-order_point" class="update-items order_point form-control" placeholder="Order Point">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!-- /*============== medications TABLE ================*/ -->
+                    <div class="container updates d-none">
+                        <div class="row justify-content-center mb-3  update update-medications">
+                            <div class="col-sm-10">
+                                <div class="form-group row">
+                                    <div class="col-sm-8">
+                                        <input type="hidden"   id="medications-medication_id" class="update-medications medication_id form-control" placeholder="Medication ID">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="medications-medication_description" class="col-sm-4 form-control-label">Medication Description</label>
+                                    <div class="col-sm-8">
+                                        <input type="text"   id="medications-medication_description" class="update-medications medication_description form-control" maxlength="30" placeholder="Medication Description">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="medications-medication_cost" class="col-sm-4 form-control-label">Medication Cost</label>
+                                    <div class="col-sm-8">
+                                        <input type="number"   id="medications-medication_cost" class="update-medications medication_cost form-control" placeholder="Medication Cost">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="medications-package_size" class="col-sm-4 form-control-label">Package Size</label>
+                                    <div class="col-sm-8">
+                                        <input type="text"   id="medications-package_size" class="update-medications package_size form-control"  maxlength="30" placeholder="Package Size">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="medications-strength" class="col-sm-4 form-control-label">Strength</label>
+                                    <div class="col-sm-8">
+                                        <input type="text"   id="medications-strength" class="update-medications strength form-control" maxlength="30" placeholder="Strength">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="medications-sig" class="col-sm-4 form-control-label">Sig</label>
+                                    <div class="col-sm-8">
+                                        <input type="text"   id="medications-sig" class="update-medications sig form-control" maxlength="30" placeholder="Sig">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="medications-units_used_ytd" class="col-sm-4 form-control-label">Units Used YTD</label>
+                                    <div class="col-sm-8">
+                                        <input type="number"   id="medications-units_used_ytd" class="update-medications units_used_ytd form-control" placeholder="Units Used YTD">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="medications-last_prescribed_date" class="col-sm-4 form-control-label">Last Prescribed Date</label>
+                                    <div class="col-sm-8">
+                                        <input type="date"   id="medications-last_prescribed_date" class="update-medications last_prescribed_date form-control" placeholder="Last Prescribed Date">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!-- /*============== nursing_units TABLE ================*/ -->
+                    <div class="container updates d-none">
+                        <div class="row justify-content-center mb-3  update update-nursing_units">
+                            <div class="col-sm-10">
+                                <div class="form-group row">
+                                    <div class="col-sm-8">
+                                        <input type="hidden"   id="nursing_units-nursing__id" class="update-nursing_units nursing__id form-control" placeholder="Nursing ID">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="nursing_units-nursing_unit_id" class="col-sm-4 form-control-label">Nursing Unit ID</label>
+                                    <div class="col-sm-8">
+                                        <input type="text"   id="nursing_units-nursing_unit_id" class="update-nursing_units nursing_unit_id form-control" maxlength="10" placeholder="Nursing Unit ID">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="nursing_units-specialty" class="col-sm-4 form-control-label">Specialty</label>
+                                    <div class="col-sm-8">
+                                        <input type="text"   id="nursing_units-specialty" class="update-nursing_units specialty form-control" maxlength="30" placeholder="Specialty">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="nursing_units-manager_first_name" class="col-sm-4 form-control-label">Manager First Name</label>
+                                    <div class="col-sm-8">
+                                        <input type="text"   id="nursing_units-manager_first_name" class="update-nursing_units manager_first_name form-control" maxlength="50" placeholder="Manager First Name">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="nursing_units-manager_last_name" class="col-sm-4 form-control-label">Manager Last Name</label>
+                                    <div class="col-sm-8">
+                                        <input type="text"   id="nursing_units-manager_last_name" class="update-nursing_units manager_last_name form-control" maxlength="50" placeholder="Manager Last Name">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="nursing_units-beds" class="col-sm-4 form-control-label">Beds</label>
+                                    <div class="col-sm-8">
+                                        <input type="number"   id="nursing_units-beds" class="update-nursing_units beds form-control" placeholder="Beds">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="nursing_units-extension" class="col-sm-4 form-control-label">Extension</label>
+                                    <div class="col-sm-8">
+                                        <input type="number"   id="nursing_units-extension" class="update-nursing_units extension form-control" placeholder="Extension">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!-- /*============== patients TABLE ================*/ -->
+                    <div class="container updates d-none">
+                        <div class="row justify-content-center mb-3  update update-patients">
+                            <div class="col-sm-10">
+                                <div class="form-group row">
+                                    <div class="col-sm-8">
+                                        <input type="hidden"   id="patients-patient_id" class="update-patients patient_id form-control" placeholder="Patient ID">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="patients-first_name" class="col-sm-4 form-control-label">First Name</label>
+                                    <div class="col-sm-8">
+                                        <input type="text"   id="patients-first_name" class="update-patients first_name form-control" maxlength="40" placeholder="First Name">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="patients-last_name  " class="col-sm-4 form-control-label">Last Name</label>
+                                    <div class="col-sm-8">
+                                        <input type="text"   id="patients-last_name " class="update-patients last_name   form-control" maxlength="40" placeholder="Last Name">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="patients-gender" class="col-sm-4 form-control-label">Gender</label>
+                                    <div class="col-sm-8">
+                                        <select id="patients-gender" class="update-patients gender form-control"  >
+                                            <option value="M">Male</option>
+                                            <option value="F">Female</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="patients-birth_date" class="col-sm-4 form-control-label">Birth Date</label>
+                                    <div class="col-sm-8">
+                                        <input type="date"   id="patients-birth_date" class="update-patients birth_date form-control" placeholder="Birth Date">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="patients-street_address" class="col-sm-4 form-control-label">Street Address</label>
+                                    <div class="col-sm-8">
+                                        <input type="text"   id="patients-street_address" class="update-patients street_address form-control"maxlength="50"  placeholder="Street Address">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="patients-city" class="col-sm-4 form-control-label">City</label>
+                                    <div class="col-sm-8">
+                                        <input type="text"   id="patients-city" class="update-patients city form-control" maxlength="30" placeholder="City">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="patients-province_id" class="col-sm-4 form-control-label">Province ID</label>
+                                    <div class="col-sm-8">
+                                        <select id="patients-province_id" class="update-patients province_id form-control">
+                                            <option value="AB">Alberta</option>
+                                            <option value="BC">British Columbia</option>
+                                            <option value="MB">Manitoba</option>
+                                            <option value="NB">New Brunswick</option>
+                                            <option value="NL">Newfoundland and Labrador</option>
+                                            <option value="NT">Northwest Territories</option>
+                                            <option value="NS">Nova Scotia</option>
+                                            <option value="NU">Nunavut</option>
+                                            <option value="ON">Ontario</option>
+                                            <option value="PE">Prince Edward Island</option>
+                                            <option value="QC">Quebec</option>
+                                            <option value="SK">Saskatchewan</option>
+                                            <option value="YT">Yukon</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="patients-postal_code" class="col-sm-4 form-control-label">Postal Code</label>
+                                    <div class="col-sm-8">
+                                        <input type="text"   id="patients-postal_code" class="update-patients postal_code form-control" maxlength="7" placeholder="Postal Code">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="patients-health_card_num" class="col-sm-4 form-control-label">Health Card Number</label>
+                                    <div class="col-sm-8">
+                                        <input type="number"   id="patients-health_card_num" class="update-patients health_card_num form-control" placeholder="Health Card Number">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="patients-allergies" class="col-sm-4 form-control-label">Allergies</label>
+                                    <div class="col-sm-8">
+                                        <input type="text"   id="patients-allergies" class="update-patients allergies form-control" maxlength="100"  placeholder="Allergies">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="patients-patient_height" class="col-sm-4 form-control-label">Patient Height</label>
+                                    <div class="col-sm-8">
+                                        <input type="number"   id="patients-patient_height" class="update-patients patient_height form-control" placeholder="Patient Height">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="patients-patient_weight" class="col-sm-4 form-control-label">Patient Weight</label>
+                                    <div class="col-sm-8">
+                                        <input type="number"   id="patients-patient_weight" class="update-patients patient_weight form-control" placeholder="Patient Weight">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!-- /*============== physicians TABLE ================*/ -->
+                    <div class="container updates d-none">
+                        <div class="row justify-content-center mb-3  update update-physicians">
+                            <div class="col-sm-10">
+                                <div class="form-group row">
+                                    <div class="col-sm-8">
+                                        <input type="hidden"   id="physicians-physician_id" class="update-physicians physician_id form-control" placeholder="Physician ID">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="physicians-first_name" class="col-sm-4 form-control-label">First Name</label>
+                                    <div class="col-sm-8">
+                                        <input type="text"   id="physicians-first_name" class="update-physicians first_name form-control" maxlength="40"  placeholder="First Name">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="physicians-last_name" class="col-sm-4 form-control-label">Last Name</label>
+                                    <div class="col-sm-8">
+                                        <input type="text"   id="physicians-last_name" class="update-physicians last_name form-control" maxlength="40"  placeholder="Last Name">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="physicians-specialty" class="col-sm-4 form-control-label">Specialty</label>
+                                    <div class="col-sm-8">
+                                        <input type="text"   id="physicians-specialty" class="update-physicians specialty form-control" maxlength="30" placeholder="Specialty">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="physicians-phone" class="col-sm-4 form-control-label">Phone</label>
+                                    <div class="col-sm-8">
+                                        <input type="text"   id="physicians-phone" class="update-physicians phone form-control" maxlength="16" placeholder="Phone">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="physicians-ohip_registration" class="col-sm-4 form-control-label">Ohip Registration</label>
+                                    <div class="col-sm-8">
+                                        <input type="number"   id="physicians-ohip_registration" class="update-physicians ohip_registration form-control" placeholder="Ohip Registration">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!-- /*============== provinces TABLE ================*/ -->
+                    <div class="container updates d-none">
+                        <div class="row justify-content-center mb-3  update update-provinces">
+                            <div class="col-sm-10">
+                                <div class="form-group row">
+                                    <div class="col-sm-8">
+                                        <input type="hidden"   id="provinces-id" class="update-provinces id form-control" placeholder="ID">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="provinces-province_id" class="col-sm-4 form-control-label">Province ID</label>
+                                    <div class="col-sm-8">
+                                        <input type="text"   id="provinces-province_id" class="update-provinces province_id form-control" maxlength="2"  placeholder="Province ID">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="provinces-province_name" class="col-sm-4 form-control-label">Province Name</label>
+                                    <div class="col-sm-8">
+                                        <input type="text"   id="provinces-province_name" class="update-provinces province_name form-control" maxlength="35" placeholder="Province Name">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!-- /*============== vendors TABLE ================*/ -->
+                    <div class="container updates d-none">
+                        <div class="row justify-content-center mb-3 update  update-vendors">
+                            <div class="col-sm-10">
+                                <div class="form-group row">
+                                    <div class="col-sm-8">
+                                        <input type="hidden"   id="vendors-vendor_id" class="update-vendors vendor_id form-control" placeholder="Vendor ID">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="vendors-vendor_name" class="col-sm-4 form-control-label">Vendor Name</label>
+                                    <div class="col-sm-8">
+                                        <input type="text"   id="vendors-vendor_name" class="update-vendors vendor_name form-control" maxlength="50" placeholder="Vendor Name">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="vendors-street_address" class="col-sm-4 form-control-label">Street Address</label>
+                                    <div class="col-sm-8">
+                                        <input type="text"   id="vendors-street_address" class="update-vendors street_address form-control" maxlength="50" placeholder="Street Address">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="vendors-city" class="col-sm-4 form-control-label">City</label>
+                                    <div class="col-sm-8">
+                                        <input type="text"   id="vendors-city" class="update-vendors city form-control" maxlength="50" placeholder="City">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="vendors-province_id" class="col-sm-4 form-control-label">Province ID</label>
+                                    <div class="col-sm-8">
+                                        <select id="vendors-province_id" class="update-vendors province_id form-control">
+                                            <option value="AB">Alberta</option>
+                                            <option value="BC">British Columbia</option>
+                                            <option value="MB">Manitoba</option>
+                                            <option value="NB">New Brunswick</option>
+                                            <option value="NL">Newfoundland and Labrador</option>
+                                            <option value="NT">Northwest Territories</option>
+                                            <option value="NS">Nova Scotia</option>
+                                            <option value="NU">Nunavut</option>
+                                            <option value="ON">Ontario</option>
+                                            <option value="PE">Prince Edward Island</option>
+                                            <option value="QC">Quebec</option>
+                                            <option value="SK">Saskatchewan</option>
+                                            <option value="YT">Yukon</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="vendors-postal_code" class="col-sm-4 form-control-label">Postal Code</label>
+                                    <div class="col-sm-8">
+                                        <input type="text"   id="vendors-postal_code" class="update-vendors postal_code form-control" maxlength="7" placeholder="Postal Code">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="vendors-contact_first_name" class="col-sm-4 form-control-label">Contact First Name</label>
+                                    <div class="col-sm-8">
+                                        <input type="text"   id="vendors-contact_first_name" class="update-vendors contact_first_name form-control" maxlength="50" placeholder="Contact First Name">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="vendors-contact_last_name" class="col-sm-4 form-control-label">Contact Last Name</label>
+                                    <div class="col-sm-8">
+                                        <input type="text"   id="vendors-contact_last_name" class="update-vendors contact_last_name form-control" maxlength="50" placeholder="Contact Last Name">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="vendors-purchases_ytd" class="col-sm-4 form-control-label">Purchases YTD</label>
+                                    <div class="col-sm-8">
+                                        <input type="number"   id="vendors-purchases_ytd" class="update-vendors purchases_ytd form-control" placeholder="Purchases YTD">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!-- /*============== unit_dose_orders TABLE ================*/ -->
+                    <div class="container updates d-none">
+                        <div class="row justify-content-center mb-3  update update-unit_dose_orders">
+                            <div class="col-sm-10">
+                                <div class="form-group row">
+                                    <div class="col-sm-8">
+                                        <input type="hidden"   id="unit_dose_orders-unit_dose_order_id" class="update-unit_dose_orders unit_dose_order_id form-control" placeholder="Unit Dose Order ID">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="unit_dose_orders-patient_id" class="col-sm-4 form-control-label">Patient ID</label>
+                                    <div class="col-sm-8">
+                                        <input type="number"   id="unit_dose_orders-patient_id" class="update-unit_dose_orders patient_id form-control" placeholder="Patient ID">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="unit_dose_orders-medication_id" class="col-sm-4 form-control-label">Medication ID</label>
+                                    <div class="col-sm-8">
+                                        <input type="number"   id="unit_dose_orders-medication_id" class="update-unit_dose_orders medication_id form-control" placeholder="Medication ID">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="unit_dose_orders-dosage" class="col-sm-4 form-control-label">Dosage</label>
+                                    <div class="col-sm-8">
+                                        <input type="text"   id="unit_dose_orders-dosage" class="update-unit_dose_orders dosage form-control" maxlength="25" placeholder="Dosage">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="unit_dose_orders-sig" class="col-sm-4 form-control-label">Sig</label>
+                                    <div class="col-sm-8">
+                                        <input type="text"   id="unit_dose_orders-sig" class="update-unit_dose_orders sig form-control" maxlength="25" placeholder="Sig">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="unit_dose_orders-dosage_route" class="col-sm-4 form-control-label">Dosage Route</label>
+                                    <div class="col-sm-8">
+                                        <input type="text"   id="unit_dose_orders-dosage_route" class="update-unit_dose_orders dosage_route form-control" maxlength="15" placeholder="Dosage Route">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="unit_dose_orders-pharmacist_initials" class="col-sm-4 form-control-label">Pharmacist Initials</label>
+                                    <div class="col-sm-8">
+                                        <input type="text"   id="unit_dose_orders-pharmacist_initials" class="update-unit_dose_orders pharmacist_initials form-control" maxlength="3" placeholder="Pharmacist Initials">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="unit_dose_orders-entered_date" class="col-sm-4 form-control-label">Entered Date</label>
+                                    <div class="col-sm-8">
+                                        <input type="date"   id="unit_dose_orders-entered_date" class="update-unit_dose_orders entered_date form-control" placeholder="Entered Date">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!-- /*============== purchase_order_lines TABLE ================*/ -->
+                    <div class="container updates d-none">
+                        <div class="row justify-content-center mb-3  update update-purchase_order_lines">
+                            <div class="col-sm-10">
+                                <div class="form-group row">
+                                    <div class="col-sm-8">
+                                        <input type="hidden"   id="purchase_order_lines-purchase_order_lines_id" class="update-purchase_order_lines purchase_order_lines_id form-control" placeholder="Purchase Order Lines ID">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="purchase_order_lines-purchase_order_id" class="col-sm-4 form-control-label">Purchase Order ID</label>
+                                    <div class="col-sm-8">
+                                        <input type="number"   id="purchase_order_lines-purchase_order_id" class="update-purchase_order_lines purchase_order_id form-control" placeholder="Purchase Order ID">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="purchase_order_lines-line_num" class="col-sm-4 form-control-label">Line Number</label>
+                                    <div class="col-sm-8">
+                                        <input type="number"   id="purchase_order_lines-line_num" class="update-purchase_order_lines line_num form-control" placeholder="Line Number">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="purchase_order_lines-item_id" class="col-sm-4 form-control-label">Item ID</label>
+                                    <div class="col-sm-8">
+                                        <input type="number"   id="purchase_order_lines-item_id" class="update-purchase_order_lines item_id form-control" placeholder="Item ID">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="purchase_order_lines-quantity" class="col-sm-4 form-control-label">Quantity</label>
+                                    <div class="col-sm-8">
+                                        <input type="number"   id="purchase_order_lines-quantity" class="update-purchase_order_lines quantity form-control" placeholder="Quantity">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="purchase_order_lines-unit_cost" class="col-sm-4 form-control-label">Unit Cost</label>
+                                    <div class="col-sm-8">
+                                        <input type="number"   id="purchase_order_lines-unit_cost" class="update-purchase_order_lines unit_cost form-control" placeholder="Unit Cost">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="purchase_order_lines-received" class="col-sm-4 form-control-label">Received</label>
+                                    <div class="col-sm-8">
+                                        <input type="number"   id="purchase_order_lines-received" class="update-purchase_order_lines received form-control" placeholder="Received">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="purchase_order_lines-cancelled" class="col-sm-4 form-control-label">Cancelled</label>
+                                    <div class="col-sm-8">
+                                        <input type="number"   id="purchase_order_lines-cancelled" class="update-purchase_order_lines cancelled form-control" placeholder="Cancelled">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="purchase_order_lines-last_arrived_date" class="col-sm-4 form-control-label">Last Arrived Date</label>
+                                    <div class="col-sm-8">
+                                        <input type="date"   id="purchase_order_lines-last_arrived_date" class="update-purchase_order_lines last_arrived_date form-control" placeholder="Last Arrived Date">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!-- /*============== purchase_orders TABLE ================*/ -->
+                    <div class="container updates d-none">
+                        <div class="row justify-content-center mb-3  update update-purchase_orders">
+                            <div class="col-sm-10">
+                                <div class="form-group row">
+                                    <div class="col-sm-8">
+                                        <input type="hidden"   id="purchase_orders-purchase_order_id" class="update-purchase_orders purchase_order_id form-control" placeholder="Purchase Order ID">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="purchase_orders-order_date" class="col-sm-4 form-control-label">Order Date</label>
+                                    <div class="col-sm-8">
+                                        <input type="date"   id="purchase_orders-order_date" class="update-purchase_orders order_date form-control" placeholder="Order Date">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="purchase_orders-department_id" class="col-sm-4 form-control-label">Department ID</label>
+                                    <div class="col-sm-8">
+                                        <input type="number"   id="purchase_orders-department_id" class="update-purchase_orders department_id form-control" placeholder="Department ID">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="purchase_orders-vendor_id" class="col-sm-4 form-control-label">Vendor ID</label>
+                                    <div class="col-sm-8">
+                                        <input type="number"   id="purchase_orders-vendor_id" class="update-purchase_orders vendor_id form-control" placeholder="Vendor ID">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="purchase_orders-total_amount" class="col-sm-4 form-control-label">Total Amount</label>
+                                    <div class="col-sm-8">
+                                        <input type="number"   id="purchase_orders-total_amount" class="update-purchase_orders total_amount form-control" placeholder="Total Amount">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="purchase_orders-order_status" class="col-sm-4 form-control-label">Order Status</label>
+                                    <div class="col-sm-8">
+                                        <select id="purchase_orders-order_status" class="update-purchase_orders order_status form-control">
+                                            <option value="CLOSED">CLOSED</option>
+                                            <option value="ACTIVE">ACTIVE</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!-- /*============== encounters TABLE ================*/ -->
+                    <div class="container updates d-none">
+                        <div class="row justify-content-center mb-3 update  update-encounters">
+                            <div class="col-sm-10">
+                                <div class="form-group row">
+                                    <div class="col-sm-8">
+                                        <input type="hidden"   id="encounters-encounter_id" class="update-encounters encounter_id form-control" placeholder="Encounter ID">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="encounters-patient_id" class="col-sm-4 form-control-label">Patient ID</label>
+                                    <div class="col-sm-8">
+                                        <input type="number"   id="encounters-patient_id" class="update-encounters patient_id form-control" placeholder="Patient ID">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="encounters-physician_id" class="col-sm-4 form-control-label">Physician ID</label>
+                                    <div class="col-sm-8">
+                                        <input type="number"   id="encounters-physician_id" class="update-encounters physician_id form-control" placeholder="Physician ID">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="encounters-encounter_date_time  " class="col-sm-4 form-control-label">Encounter Date Time</label>
+                                    <div class="col-sm-8">
+                                        <input type="datetime-local"   id="encounters-encounter_date_time " class="update-encounters encounter_date_time   form-control" placeholder="Encounter Date Time">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="encounters-notes" class="col-sm-4 form-control-label">Notes</label>
+                                    <div class="col-sm-8">
+                                        <textarea rows="4" id="encounters-notes" class="update-encounters notes form-control" placeholder="Notes"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    <!-- /*============== users TABLE ================*/ -->
+                    <div class="container updates d-none">
+                        <div class="row justify-content-center mb-3  update update-users">
+                            <div class="col-sm-10">
+                                <div class="form-group row">
+                                    <div class="col-sm-8">
+                                        <input type="hidden"   id="users-user_id" class="update-users user_id form-control" placeholder="User ID">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="users-user_email" class="col-sm-4 form-control-label">User Email</label>
+                                    <div class="col-sm-8">
+                                        <input type="email"   id="users-user_email" class="update-users user_email form-control" maxlength="100" placeholder="User Email">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="users-user_password" class="col-sm-4 form-control-label">User Password</label>
+                                    <div class="col-sm-8">
+                                        <input type="password"   id="users-user_password" class="update-users user_password form-control" maxlength="30" placeholder="User Password">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="users-authoritative" class="col-sm-4 form-control-label">Authoritative</label>
+                                    <div class="col-sm-8">
+                                        <select id="users-authoritative" class="update-users authoritative form-control" >
+                                            <option value="U">User</option>
+                                            <option value="P">Patient</option>
+                                            <option value="N">Nurse</option>
+                                            <option value="D">Doctor</option>
+                                            <option value="M">Manager</option>
+                                            <option value="A">Admin</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="users-patient_id" class="col-sm-4 form-control-label">Patient ID</label>
+                                    <div class="col-sm-8">
+                                        <input type="number"   id="users-patient_id" class="update-users patient_id form-control" placeholder="Patient ID">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-sm-3 row">
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <button class="btn btn-warning btnUpdate w-25">Update/Insert</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="border border-dark border-bottom-0 border-left-0 border-right-0 pt-sm-3">
+
+            <!-- /*============== PROCESSINNG: ANNOUNCEMENT ================*/ -->
+            <div class="row mb-sm-3 pb-sm-3 pl-sm-3 ml-sm-3">
+                <div class="col-sm-9">
+                    <div class="container pl-sm-3 ml-sm-3 ">
+                        <span id="target" class="pl-sm-3 ml-sm-3 row d-flex justify-content-end"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid bg-light">
+        <!-- /*============== PROCESSINNG: LIST OF ITEMS ================*/ -->
+        <div class="row mt-sm-3 pt-sm-3">
+            <div class="col-sm-12 mt-sm-3 pt-sm-3">
+                <div class="container">
+                    <div class="row ml-sm-3 pl-sm-3">
+                        <div class="col-sm-12 ml-sm-3 pl-sm-3 sessions session-new">
+                            <button type="button" class="btn-primary btn-sm btnNew ml-sm-3 pl-sm-3 d-none">NEW <i class="fas fa-plus-circle"></i></button>                    
+                        </div>
+                    </div>
+                </div>
+                <table class="table table-striped table-condensed table-tight-vert table-bordered table-hover">
+                    <thead></thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <form id="formHiden">
+        <input type="hidden" id="kindOfInteractDb" name="kindOfInteractDb">  
+    </form>
+</body>
+</html>

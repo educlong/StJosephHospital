@@ -1,0 +1,64 @@
+@charset "UTF-8";
+/*
+     I, Nguyen Duc Long, 000837437 certify that this material is my original work.
+     No other person's work has been used without due acknowledgement.
+
+     @date Dec 10, 2021
+     @author DUC LONG NGUYEN (Paul)
+     @A brief description of the file: Final project: St Joseph's Hospital Management;
+        file css
+*/
+.container .blackBackground {
+  transition: 0.4s;
+  background: rgba(0, 0, 0, 0.6);
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 3; }
+.container .menuContent, .container .menuContentDelete,  .container .menuContentUpdate,  .container .infoUpdate ,  .container .infoUser,  .container .infoLogin,  .container .infoRegister {
+  position: fixed;
+  width: 70%;
+  height: 0%;
+  background: #272727;
+  z-index: 4;
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.4s;
+  color: white;
+  font-size: x-large; }
+.container .menuContentDisplay, .container .menuContentDisplayDelete, .container .menuContentDisplayUpdate , .container .infoUpdateDisplay, .container .infoUserDisplay, .container .infoLoginDisplay, .container .infoRegisterDisplay {
+  visibility: visible !important;
+  opacity: 1 !important; }
+  .container .menuContentDisplay .menuContentConfig, .container .menuContentDisplayDelete .menuContentConfigDelete, .container .menuContentDisplayUpdate .menuContentConfigUpdate, .container .infoUpdateDisplay .infoUpdateConfig , .container .infoUserDisplay .infoUserConfig, .container .infoLoginDisplay .infoLoginConfig, .container .infoRegisterDisplay .infoRegisterConfig{
+    margin: 10% 0px 0px 10%;
+    width: 80%; }
+.container .remove {
+  position: absolute;
+  opacity: 0;
+  visibility: hidden;
+  transition: .4s; }
+.container .row .confirmInfo {
+  text-align: center; }
+  .container .row .confirmInfo div {
+    font-size: xx-large;
+    font-weight: bold; }
+
+@media (max-width: 320px) {
+  .container .menuContent, .container .menuContentDelete,  .container .menuContentUpdate,  .container .infoUpdate ,  .container .infoUser, .container .infoLogin,  .container .infoRegister {
+    font-size: small; }
+  .container .menuContentDisplay, .container .menuContentDisplayDelete, .container .menuContentDisplayUpdate ,  .container .infoUpdateDisplay,  .container .infoUserDisplay,  .container .infoLoginDisplay,  .container .infoRegisterDisplay {
+    visibility: visible !important;
+    /*!important: ưu tiên tất cả các case*/
+    opacity: 1 !important; }
+    .container .menuContentDisplay .menuContentConfig, .container .menuContentDisplayDelete .menuContentConfigDelete,  .container .menuContentDisplayUpdate .menuContentConfigUpdate, .container .infoUpdateDisplay .infoUpdateConfig, .container .infoUserDisplay .infoUserConfig, .container .infoLoginDisplay .infoLoginConfig, .container .infoRegisterDisplay .infoRegisterConfig {
+      margin: 0% 0px 0px 5%;
+      width: 92%; } }
+
+/*# sourceMappingURL=assignment03_Long_000837437.css.map */
